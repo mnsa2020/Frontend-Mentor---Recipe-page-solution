@@ -1,0 +1,164 @@
+// Variables
+$Nutmeg: hsl(14, 45%, 36%);
+$darkRaspberry: hsl(332, 51%, 32%);
+
+$White: hsl(0, 0%, 100%);
+$roseWhite: hsl(330, 100%, 98%);
+$Eggshell: hsl(30, 54%, 90%);
+$lightGrey: hsl(30, 18%, 87%);
+$wengeBrown: hsl(30, 10%, 34%);
+$darkCharcoal: hsl(24, 5%, 18%);
+
+// @import url(../fonts/young-serif/YoungSerif-Regular.ttf);
+@import url(https://fonts.googleapis.com/css2?family=Young+Serif&display=swap);
+@import url(../fonts/outfit/Outfit-VariableFont_wght.ttf);
+
+$primaryFont: "Young Serif", serif;
+$secondaryFont: "Outfit", sans-serif;
+// Variables
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $secondaryFont;
+}
+img,
+picture {
+  max-width: 100%;
+}
+
+section {
+  background: $Eggshell;
+  padding: 2em;
+  @media (max-width: 375px) {
+    padding: 0;
+  }
+  .container {
+    max-width: 80%;
+    margin-inline: auto;
+    padding: 2em;
+    background: $White;
+    border-radius: 1rem;
+    @media (max-width: 375px) {
+      max-width: 100%;
+      border-radius: 0;
+    }
+    .img {
+      padding-top: 0;
+      img {
+        border-radius: 0.5rem;
+      }
+    }
+    .description {
+      padding-block: 2em;
+      h1 {
+        font-size: 2em;
+        font-weight: bold;
+        font-family: $primaryFont;
+        color: $darkCharcoal;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: $wengeBrown;
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+    }
+    .preparation {
+      background: $roseWhite;
+      padding: 1.5em;
+      border-radius: 0.5rem;
+      h3 {
+        color: $darkCharcoal;
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        list-style: disc;
+        padding-left: 20px;
+        li {
+          padding-left: 20px;
+          line-height: 2;
+        }
+      }
+    }
+    .ingredients {
+      padding-block: 2em;
+      border-bottom: 1px solid $Eggshell;
+      h2 {
+        color: $Nutmeg;
+        font-family: $primaryFont;
+        font-weight: normal;
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        list-style: disc;
+        padding-left: 20px;
+        li {
+          padding-left: 20px;
+          line-height: 2;
+          font-weight: normal;
+        }
+      }
+    }
+    .instructions {
+      padding-block: 2em;
+      border-bottom: 1px solid $Eggshell;
+      h2 {
+        color: $Nutmeg;
+        font-family: $primaryFont;
+        font-weight: normal;
+        margin-bottom: 1rem;
+      }
+      ol {
+        list-style-position: inside;
+        list-style: decimal;
+        padding-left: 20px;
+        li {
+          padding-left: 20px;
+          line-height: 2;
+          b {
+          }
+        }
+      }
+    }
+    .nutrition {
+      padding-block: 2em;
+      h2 {
+        color: $Nutmeg;
+        font-family: $primaryFont;
+        font-weight: normal;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 1.8;
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        tr {
+          line-height: 2.5;
+          td {
+            border-bottom: 1px solid $Eggshell;
+            padding-left: 1em;
+            &:first-child {
+              color: $darkRaspberry;
+            }
+            &:last-child {
+              color: $Nutmeg;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .attribution {
+    padding-block: 20px;
+    background: $Eggshell;
+  }
+}
